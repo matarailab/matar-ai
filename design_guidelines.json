@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "name": "Matar.AI",
+    "domain": "AI, Automations, Immersive Tech B2B Consulting",
+    "theme": "Dark Theme",
+    "archetype": "Archetype 4 (Swiss & High-Contrast) + Dark Mode mixed with Archetype 5 (Jewel & Luxury)",
+    "vibe": "Futuristic, clean, modern SaaS AI startup UI (Vercel/Linear aesthetic), premium, authoritative.",
+    "language": "Italian (default) with English toggle option."
+  },
+  "typography": {
+    "font_families": {
+      "headings": "Outfit or Cabinet Grotesk (Premium, geometric, striking)",
+      "body": "Manrope or IBM Plex Sans (High legibility, technical but human)",
+      "mono": "JetBrains Mono (For data/tech accents)"
+    },
+    "hierarchy": {
+      "h1": "text-5xl md:text-6xl tracking-tighter font-medium text-white",
+      "h2": "text-3xl md:text-4xl tracking-tight font-medium text-white",
+      "h3": "text-xl md:text-2xl tracking-tight font-medium text-white",
+      "body": "text-base md:text-lg leading-relaxed text-slate-300",
+      "overline": "text-xs font-mono uppercase tracking-[0.2em] text-cyan-400",
+      "notes": "Never use Inter for headings. Use fluid typography with clamp or Tailwind breakpoints."
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#050B1A",
+      "secondary": "#0A0F1E",
+      "elevated": "rgba(255, 255, 255, 0.03)"
+    },
+    "brand": {
+      "purple": "#8B5CF6",
+      "blue": "#3B82F6",
+      "cyan": "#06B6D4"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#94A3B8",
+      "accent": "#06B6D4"
+    },
+    "surfaces": {
+      "glass": "backdrop-blur-xl bg-[#050B1A]/60 border border-white/10",
+      "card_hover": "hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300"
+    },
+    "rules": {
+      "gradients": "Do not overload with gradients. Use solid dark backgrounds and apply gradients ONLY to specific text spans (e.g., bg-clip-text) or as subtle glowing borders.",
+      "contrast": "Ensure all text meets APCA standards. Do not use pure black (#000000); use the tinted #050B1A base."
+    }
+  },
+  "layout_and_spacing": {
+    "philosophy": "Generous Spacing (p-8, p-12, p-24) to establish a premium 'Jewel & Luxury' feel.",
+    "marketing_grid": "Use Mode A 'Tetris Grid' with high asymmetry for the marketing page. Avoid standard 3-column Bootstrap grids.",
+    "dashboard_grid": "Use Mode B 'Control Room Grid' for the Admin CMS.",
+    "containers": "Max width 7xl (max-w-7xl) for standard sections, edge-to-edge for hero backgrounds."
+  },
+  "motion_and_interactions": {
+    "philosophy": "Smooth, deliberate, and premium. No bouncy or chaotic animations.",
+    "libraries": ["framer-motion", "lucide-react"],
+    "patterns": {
+      "hover": "Subtle lift (-translate-y-1) and inner glow via box-shadow on cards.",
+      "scroll": "Fade in and slight upward reveal (y: 20 -> 0, opacity: 0 -> 1) using staggered children for lists.",
+      "buttons": "Relative positioning with an absolute inset gradient border that rotates or brightens on hover."
+    }
+  },
+  "media": {
+    "images": [
+      {
+        "category": "logo",
+        "url": "https://customer-assets.emergentagent.com/job_immersive-automation/artifacts/scuwnsqc_Matar-AI.png",
+        "description": "Matar.AI Logo - Place in Header and Footer."
+      },
+      {
+        "category": "hero_background",
+        "url": "https://static.prod-images.emergentagent.com/jobs/c2d4ebd9-bc8f-4eff-a674-46e3c2f458e0/images/0c04ad95a867669793bda21b805d035f4602ec517e8765099061358f218c711f.png",
+        "description": "Hero background. Must be positioned absolute, inset-0, with a bg-[#050B1A]/80 overlay so text remains readable."
+      },
+      {
+        "category": "service_icon_ar_vr",
+        "url": "https://static.prod-images.emergentagent.com/jobs/c2d4ebd9-bc8f-4eff-a674-46e3c2f458e0/images/30fd41a64f3f9fd427b1f19db50525ecadeb5d194fec101b741c70b13ac99ab5.png",
+        "description": "Visual asset for the 'Esperienze 3D/AR/VR' service card."
+      },
+      {
+        "category": "service_icon_ai",
+        "url": "https://static.prod-images.emergentagent.com/jobs/c2d4ebd9-bc8f-4eff-a674-46e3c2f458e0/images/ff35c8ec14965d2c301c7ba76c6a95c389d0e19b77e7fe04caef23898672039b.png",
+        "description": "Visual asset for the 'AI & Automazioni' service card."
+      },
+      {
+        "category": "methodology_graphic",
+        "url": "https://static.prod-images.emergentagent.com/jobs/c2d4ebd9-bc8f-4eff-a674-46e3c2f458e0/images/ae85c6e01a24339259628554a52d4d9888cfab9dc961694df2a02cd0680d2df6.png",
+        "description": "Graphic for the 'Metodo / Process' section (analisi -> strategia -> sviluppo -> implementazione -> ottimizzazione)."
+      }
+    ]
+  },
+  "pages_and_sections": {
+    "landing_page": {
+      "hero": "H1 emphasizing ROI and high-ticket AI implementation. CTA: 'Prenota una Consulenza'. Large background asset with heavy overlay.",
+      "per_chi_e": "Target audience section acting as a filter. 'Sei un'azienda B2B...' vs 'Non facciamo per te se...'. Use strict, authoritative typography.",
+      "services": "Bento grid (Mode A) showcasing the 3 pillars: AI & Automazioni, Formazione AI, Esperienze 3D/AR/VR. Use the generated 3D assets.",
+      "methodology": "Step-by-step process timeline using a vertical layout or sticky scroll. Use monospace fonts for step numbers.",
+      "case_studies": "Grid of realistic examples showing metrics and ROI. Use 'Tracing Beam' border effect on hover.",
+      "about": "Brief, authoritative intro mentioning Matar.AI and EvolverAI. Focus on business value, not just technical skills.",
+      "blog_preview": "Grid showing top 3 latest insights with standard CMS card styling."
+    },
+    "admin_dashboard": {
+      "style": "Strict Control Room Grid (Mode B). Dense, functional UI. Rely heavily on Shadcn/UI for tables, forms, and dialogs.",
+      "features": "CRUD for blog articles, SEO meta fields, rich text editor integration."
+    }
+  },
+  "instructions_to_main_agent": [
+    "NEVER use Shadcn UI's Card or Section components for the marketing landing page; use raw HTML and Tailwind for complete creative control.",
+    "USE Shadcn UI extensively for the Admin CMS, Contact Forms, and functional pieces.",
+    "DO NOT use placeholder images. Rely entirely on the URLs provided in the media section.",
+    "Apply `data-testid` attributes to all CTAs, navigation links, and form elements.",
+    "Ensure the hero background has an appropriate overlay (`bg-[#050B1A]/80`) so the white text contrast passes accessibility checks.",
+    "The primary CTA button should be a solid Electric Blue (#3B82F6) with white text, and on hover, add a subtle Cyan (#06B6D4) drop shadow or glow. Avoid making the button itself a full 3-color gradient.",
+    "Implement a language toggle (IT/EN) in the navigation header. Content default is Italian."
+  ]
+}

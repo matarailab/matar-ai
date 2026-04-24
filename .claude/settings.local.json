@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Read(//c/Users/yo-ma/Downloads//**)",
+      "Read(//c/Users/yo-ma/Downloads/**)",
+      "Bash(npm start *)",
+      "Bash(npm install *)",
+      "Bash(SKIP_PREFLIGHT_CHECK=true npm start)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(netstat -ano)",
+      "Bash(awk '{print $5}')",
+      "Bash(xargs -I{} taskkill //PID {} //F)",
+      "Bash(copy \"C:\\\\Users\\\\yo-ma\\\\Downloads\\\\Matar AI \\(2\\)\\\\Matar-AI-Transparency.png\" \"C:\\\\Users\\\\yo-ma\\\\Downloads\\\\sito mat\\\\frontend\\\\public\\\\logo.png\")",
+      "Bash(copy \"C:\\\\Users\\\\yo-ma\\\\Downloads\\\\Matar AI \\(2\\)\\\\Matar-AI.png\" \"C:\\\\Users\\\\yo-ma\\\\Downloads\\\\sito mat\\\\frontend\\\\public\\\\logo-solid.png\")",
+      "Bash(copy \"C:\\\\Users\\\\yo-ma\\\\Downloads\\\\Matar AI \\(2\\)\\\\Matar-AI.jpg\" \"C:\\\\Users\\\\yo-ma\\\\Downloads\\\\sito mat\\\\frontend\\\\public\\\\og-image.jpg\")",
+      "Bash(copy \"C:\\\\Users\\\\yo-ma\\\\Downloads\\\\Matar AI \\(2\\)\\\\Matar AI.svg\" \"C:\\\\Users\\\\yo-ma\\\\Downloads\\\\sito mat\\\\frontend\\\\public\\\\logo.svg\")",
+      "Bash(dir)"
+    ]
+  }
+}

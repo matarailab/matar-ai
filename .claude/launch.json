@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "matar-ai",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "cd frontend && npm start"],
+      "port": 3000
+    }
+  ]
+}
