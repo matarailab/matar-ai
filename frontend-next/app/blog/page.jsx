@@ -42,7 +42,7 @@ export default async function BlogPage() {
                   <div className="overflow-hidden h-44 relative" style={{ background: 'linear-gradient(135deg, rgba(37,99,235,0.15), rgba(124,58,237,0.15))' }}>
                     {post.mainImage ? (
                       <img
-                        src={urlFor(post.mainImage).width(600).height(352).url()}
+                        src={urlFor(post.mainImage).width(600).height(352).auto('format').url()}
                         alt={post.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />

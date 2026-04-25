@@ -497,7 +497,7 @@ const BlogPreviewSection = ({ t }) => {
                 style={{ background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(255,255,255,0.07)' }}>
                 {post.mainImage && (
                   <div className="overflow-hidden h-44">
-                    <img src={urlFor(post.mainImage).width(400).height(176).url()} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={urlFor(post.mainImage).width(400).height(176).auto('format').url()} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                 )}
                 <div className="p-6">

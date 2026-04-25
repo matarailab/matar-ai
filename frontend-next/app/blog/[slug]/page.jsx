@@ -10,7 +10,7 @@ const portableTextComponents = {
   types: {
     image: ({ value }) => (
       <img
-        src={urlFor(value).width(800).url()}
+        src={urlFor(value).width(800).auto('format').url()}
         alt={value.alt || ''}
         className="w-full my-8 rounded-lg"
       />
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
     if (!post) return { title: 'Articolo non trovato' };
     const title = post.seo_title || post.title;
     const description = post.seo_description || post.excerpt || '';
-    const image = post.mainImage ? urlFor(post.mainImage).width(1200).height(630).url() : `${SITE}/og-image.jpg`;
+    const image = post.mainImage ? urlFor(post.mainImage).width(1200).height(630).auto('format').url() : `${SITE}/og-image.jpg`;
     return {
       title: `${title} | Matar.AI`,
       description,
@@ -106,7 +106,7 @@ export default async function BlogPostPage({ params }) {
 
         {mainImage && (
           <div className="mb-12 rounded-2xl overflow-hidden">
-            <img src={urlFor(mainImage).width(800).url()} alt={title} className="w-full object-cover" />
+            <img src={urlFor(mainImage).width(800).auto('format').url()} alt={title} className="w-full object-cover" />
           </div>
         )}
 
