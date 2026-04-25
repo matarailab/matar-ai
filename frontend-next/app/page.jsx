@@ -410,7 +410,7 @@ const ChiSonoSection = ({ t }) => {
                 <p className="text-xs text-slate-500 mb-0.5">{cs.evolver_label}</p>
                 <p className="font-semibold text-white">EvolverAI</p>
               </div>
-              <a href="https://evolverai.it" target="_blank" rel="noopener noreferrer"
+              <a href="https://evolver-ai.it" target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-xs text-purple-400 hover:text-purple-300 font-medium transition-colors">
                 Scopri <ArrowUpRight size={13} />
               </a>
@@ -445,7 +445,7 @@ const AboutSection = ({ t }) => {
                 <span key={i} className="text-xs px-3 py-1.5 rounded-full border border-white/10 text-slate-300 bg-white/[0.04]">{b}</span>
               ))}
             </div>
-            <a href="https://evolverai.it" target="_blank" rel="noopener noreferrer" data-testid="about-evolver-link"
+            <a href="https://evolver-ai.it" target="_blank" rel="noopener noreferrer" data-testid="about-evolver-link"
               className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-medium">
               {a.cta} <ExternalLink size={13} />
             </a>
@@ -727,9 +727,9 @@ const ResourcesSection = ({ onOpenMagnet }) => {
               style={{ background: 'linear-gradient(135deg, rgba(6,182,212,0.2), rgba(37,99,235,0.2))', border: '1px solid rgba(6,182,212,0.3)' }}>
               <Mail size={22} className="text-cyan-300" />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-2">AI Business Lab — Newsletter</h3>
+            <h3 className="text-xl font-semibold text-white mb-2">Matar Signals</h3>
             <p className="text-sm text-slate-400 leading-relaxed mb-6 flex-1">
-              Ogni 2 settimane: un caso reale, una stack consigliata e un'azione concreta che puoi applicare entro la giornata. No teoria, no fuffa.
+              La newsletter su AI tool, casi reali e news per chi vuole restare competitivo. Niente teoria, solo ciò che funziona davvero.
             </p>
             <NewsletterForm />
           </div>
