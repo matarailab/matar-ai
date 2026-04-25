@@ -13,16 +13,16 @@ const builder = createImageUrlBuilder(client);
 export const urlFor = (source) => builder.image(source);
 
 export const getPostsQuery = (limit = 10, skip = 0, category = null) => {
-  const categoryFilter = category ? `&& category->slug.current == "${category}"` : '';
-  return `*[_type == "post" ${categoryFilter}] | order(publishedAt desc)[${skip}...${skip + limit}] {
+  const categoryFilter = category ? `&& category == "${category}"` : '';
+  return `*[_type == "post" ${categoryFilter}] | order(published_at desc)[${skip}...${skip + limit}] {
     _id,
     title,
     slug,
     excerpt,
     content,
-    mainImage,
+    "mainImage": cover_image { ..., asset-> },
     author,
-    publishedAt,
+    "publishedAt": published_at,
     category,
     seo_title,
     seo_description,
@@ -35,9 +35,9 @@ export const getPostBySlugQuery = (slug) => `*[_type == "post" && slug.current =
   title,
   slug,
   content,
-  mainImage,
+  "mainImage": cover_image { ..., asset-> },
   author,
-  publishedAt,
+  "publishedAt": published_at,
   category,
   seo_title,
   seo_description,
@@ -45,13 +45,13 @@ export const getPostBySlugQuery = (slug) => `*[_type == "post" && slug.current =
   excerpt
 }`;
 
-export const getLatestPostsQuery = (limit = 3) => `*[_type == "post"] | order(publishedAt desc)[0...${limit}] {
+export const getLatestPostsQuery = (limit = 3) => `*[_type == "post"] | order(published_at desc)[0...${limit}] {
   _id,
   title,
   slug,
   excerpt,
-  mainImage,
-  publishedAt,
+  "mainImage": cover_image { ..., asset-> },
+  "publishedAt": published_at,
   category,
   tags
 }`;
@@ -63,6 +63,6 @@ export const getCategoriesQuery = () => `*[_type == "category"] {
 }`;
 
 export const getPostCountQuery = (category = null) => {
-  const categoryFilter = category ? `&& category->slug.current == "${category}"` : '';
+  const categoryFilter = category ? `&& category == "${category}"` : '';
   return `count(*[_type == "post" ${categoryFilter}])`;
 };

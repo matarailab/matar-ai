@@ -56,9 +56,9 @@ export default async function BlogPage() {
 
                   <div className="p-5">
                     <div className="flex items-center gap-2 mb-3 min-h-[22px]">
-                      {post.category?.title && (
+                      {post.category && (
                         <span className="text-xs font-mono uppercase tracking-wider text-cyan-400 px-2 py-1 rounded bg-cyan-400/10">
-                          {post.category.title}
+                          {post.category}
                         </span>
                       )}
                       {post.publishedAt && (

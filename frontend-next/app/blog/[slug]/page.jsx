@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }) {
           <div className="flex items-center gap-3 mb-4">
             {category && (
               <span className="text-xs font-mono text-cyan-400 px-3 py-1 rounded-full bg-cyan-400/10">
-                {category.title}
+                {category}
               </span>
             )}
             {publishedAt && (

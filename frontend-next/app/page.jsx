@@ -501,7 +501,7 @@ const BlogPreviewSection = ({ t }) => {
                   </div>
                 )}
                 <div className="p-6">
-                  <span className="text-xs font-mono text-cyan-400">{post.category?.title || post.category}</span>
+                  <span className="text-xs font-mono text-cyan-400">{post.category}</span>
                   <h3 className="text-sm font-semibold text-white mt-2 mb-3 leading-snug group-hover:text-blue-300 transition-colors">
                     {post.title}
                   </h3>
