@@ -50,7 +50,7 @@ export const getLatestPostsQuery = (limit = 3) => `*[_type == "post"] | order(pu
   title,
   slug,
   excerpt,
-  "mainImage": cover_image { ..., asset-> },
+  "mainImage": cover_image,
   "publishedAt": published_at,
   category,
   tags
