@@ -19,6 +19,15 @@ export default function LeadMagnetModal({ open, onClose, magnet = '5-Processi-Op
     return () => { document.body.style.overflow = ''; };
   }, [open]);
 
+  const triggerDownload = () => {
+    const a = document.createElement('a');
+    a.href = `/${magnet}`;
+    a.download = magnet;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+
   const submit = async (e) => {
     e.preventDefault();
     if (!form.email) return;
@@ -30,19 +39,26 @@ export default function LeadMagnetModal({ open, onClose, magnet = '5-Processi-Op
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...form, magnet }),
       });
+
+      // Se la risposta non è JSON (es. in locale senza Cloudflare) scarica direttamente
+      const contentType = res.headers.get('content-type') || '';
+      if (!contentType.includes('application/json')) {
+        triggerDownload();
+        setStatus('success');
+        return;
+      }
+
       const data = await res.json();
       if (!res.ok || !data.ok) throw new Error(data.error || 'Errore generico');
-
-      // Download automatico del PDF
-      const a = document.createElement('a');
-      a.href = `/${magnet}`;
-      a.download = magnet;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-
+      triggerDownload();
       setStatus('success');
     } catch (err) {
+      // SyntaxError = risposta HTML anziché JSON (locale) → scarica comunque
+      if (err instanceof SyntaxError) {
+        triggerDownload();
+        setStatus('success');
+        return;
+      }
       setStatus('error');
       setErrorMsg(err.message || 'Qualcosa è andato storto. Riprova tra un attimo.');
     }
