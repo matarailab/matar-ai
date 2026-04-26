@@ -175,7 +175,7 @@ const ServicesSection = ({ t }) => {
                 <div className="h-[2px] w-full transition-all duration-300"
                   style={{ background: `linear-gradient(90deg, transparent 0%, ${p.color} 50%, transparent 100%)` }} />
                 <div className="overflow-hidden h-44 relative">
-                  <img src={item.img} alt={item.overline}
+                  <img src={item.img} alt={item.overline} loading="lazy" decoding="async"
                     className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-600" />
                   <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom, transparent 30%, rgba(15,23,42,0.9) 100%)` }} />
                   <span className="absolute top-3 left-4 text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full"
@@ -497,7 +497,7 @@ const BlogPreviewSection = ({ t }) => {
                 style={{ background: 'rgba(15,23,42,0.8)', border: '1px solid rgba(255,255,255,0.07)' }}>
                 {post.mainImage && (
                   <div className="overflow-hidden h-44">
-                    <img src={urlFor(post.mainImage).width(400).height(176).auto('format').url()} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={urlFor(post.mainImage).width(400).height(176).auto('format').url()} alt="" loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                 )}
                 <div className="p-6">
