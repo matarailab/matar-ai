@@ -44,6 +44,8 @@ export default async function BlogPage() {
                       <img
                         src={urlFor(post.mainImage).width(600).height(352).auto('format').url()}
                         alt={post.title}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (
